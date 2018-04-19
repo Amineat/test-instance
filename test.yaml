@@ -30,7 +30,7 @@ Resources:
           ToPort: '22'
           CidrIp: 0.0.0.0/0
         - IpProtocol: tcp
-          FromPort: '880'
-          ToPort: '880'
+          FromPort: '80'
+          ToPort: '80'
           CidrIp: 0.0.0.0/0 
  
