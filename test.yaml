@@ -19,7 +19,7 @@ Resources:
         sudo apt install docker.io -y
         sudo chmod 666 /var/run/docker.sock
         sudo apt-get install awscli -y
-        sudo apt-get install tmux 
+        sudo apt-get install tmux -y 
   KopsAWSSG:         
     Type: AWS::EC2::SecurityGroup
     Properties:
