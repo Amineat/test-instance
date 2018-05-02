@@ -20,14 +20,12 @@ Resources:
         sudo chmod 666 /var/run/docker.sock
         sudo apt-get install awscli -y
         sudo apt-get install tmux -y
-  KopsAWSSss: 
-    Type: AWS::EC2::Instance
-    Properties:
-      InstanceType: t2.micro
-      ImageId: ami-4d46d534
-      KeyName: KeyKops
-      SecurityGroups:
-        - !Ref KopsAWSSG 
+    MySNSTopic:
+      Type: AWS::SNS::Topic
+      Properties:
+        Subscription:
+        - Endpoint: "amine.ait.tayeb@devoteam.com"
+          Protocol: email 
   KopsAWSSG:         
     Type: AWS::EC2::SecurityGroup
     Properties:
