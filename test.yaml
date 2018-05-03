@@ -19,7 +19,15 @@ Resources:
         sudo apt install docker.io -y
         sudo chmod 666 /var/run/docker.sock
         sudo apt-get install awscli -y
-        sudo apt-get install tmux -y 
+        sudo apt-get install tmux -y
+  KopsAWSSSS:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-4d46d534
+      KeyName: KeyKops
+      SecurityGroups:
+        - !Ref KopsAWSSG
   KopsAWSSG:         
     Type: AWS::EC2::SecurityGroup
     Properties:
