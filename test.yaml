@@ -2,6 +2,8 @@ AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   VPCId:
     Type: String
+  SubnetsParameter:
+    Type: String
 Resources:
   KopsAWS:
     Type: AWS::EC2::Instance
@@ -9,6 +11,8 @@ Resources:
       InstanceType: t2.micro
       ImageId: ami-4d46d534
       KeyName: KeyKops
+      SubnetsiId:
+        - !Ref SubnetsParameter       
       VpcId:
         - !Ref VPCId
       SecurityGroups:
