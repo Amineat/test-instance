@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
-  VPCIdParameter:
+  VPCId:
     Type: String
 Resources:
   KopsAWS:
@@ -10,7 +10,7 @@ Resources:
       ImageId: ami-4d46d534
       KeyName: KeyKops
       VpcId:
-        - !Ref VPCIdParameter
+        - !Ref VPCId
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
