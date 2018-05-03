@@ -10,7 +10,7 @@ Resources:
       ImageId: ami-4d46d534
       KeyName: KeyKops
       VpcId:
-        - !Ref VpcId
+        - !Ref VPCIdParameter
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
