@@ -9,6 +9,8 @@ Resources:
       InstanceType: t2.micro
       ImageId: ami-4d46d534
       KeyName: KeyKops
+      VpcId:
+        - !Ref: VpcId
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
