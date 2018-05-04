@@ -30,8 +30,6 @@ Resources:
     Type: AWS::EC2::NetworkInterface
     Properties:
       Description: eth0
-      SecurityGroups:
-        - !Ref KopsAWSSG
       SubnetId: !Ref 'SubnetId'
   KopsAWSSG:         
     Type: AWS::EC2::SecurityGroup
