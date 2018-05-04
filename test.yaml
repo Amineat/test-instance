@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   VPCId:
-    Type: String
+    Type: AWS::EC2::VPC::Id
   SubnetId:
-    Type: String
+    Type: AWS::EC2::Subnet::Id
 Resources:
   KopsAWS:
     Type: AWS::EC2::Instance
