@@ -26,13 +26,13 @@ Resources:
         sudo chmod 666 /var/run/docker.sock
         sudo apt-get install awscli -y
         sudo apt-get install tmux -y
-   eth0:
-     Type: AWS::EC2::NetworkInterface
-     Properties:
-       Description: eth0
-       SecurityGroups:
-         - !Ref KopsAWSSG
-       SubnetId: !Ref 'SubnetId'
+  eth0:
+    Type: AWS::EC2::NetworkInterface
+    Properties:
+      Description: eth0
+      SecurityGroups:
+        - !Ref KopsAWSSG
+      SubnetId: !Ref 'SubnetId'
   KopsAWSSG:         
     Type: AWS::EC2::SecurityGroup
     Properties:
