@@ -29,8 +29,7 @@ Resources:
   KopsAWSSG:         
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Enable SSH access via port 22 and HTTP via 80
-      VpcId: !Ref VPCId
+      GroupDescription: Enable SSH access via port 22 and HTTP via 80 
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: '22'
