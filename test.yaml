@@ -12,7 +12,7 @@ Resources:
       ImageId: ami-4d46d534
       KeyName: KeyKops
       SubnetsParameter:
-        - !Ref SubnetsParameter       
+        Ref: "SubnetsParameter"       
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
