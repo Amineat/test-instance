@@ -1,0 +1,5 @@
+Parameters: 
+  VPCId: 
+    Type: AWS::EC2::VPC::Id
+  SubnetId:
+    Type: AWS::EC2::Subnet::Id
