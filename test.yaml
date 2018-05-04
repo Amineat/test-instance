@@ -10,8 +10,7 @@ Resources:
     Properties: 
       InstanceType: t2.micro
       ImageId: ami-4d46d534
-      KeyName: KeyKops
-      SubnetId: !Ref SubnetPar          
+      KeyName: KeyKops 
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
