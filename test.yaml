@@ -26,10 +26,18 @@ Resources:
         sudo chmod 666 /var/run/docker.sock
         sudo apt-get install awscli -y
         sudo apt-get install tmux -y
+   eth0:
+     Type: AWS::EC2::NetworkInterface
+     Properties:
+       Description: eth0
+       SecurityGroups:
+         - !Ref KopsAWSSG
+       SubnetId: !Ref 'SubnetId'
   KopsAWSSG:         
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22 and HTTP via 80 
+      VpcId: !Ref 'VPCId'
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: '22'
