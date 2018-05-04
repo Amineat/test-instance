@@ -11,8 +11,9 @@ Resources:
       InstanceType: t2.micro
       ImageId: ami-4d46d534
       KeyName: KeyKops
-    SubnetId:
-      Ref: "SubnetsParameter"       
+      Parameters:
+        SubnetId:
+          Ref: "SubnetsParameter"       
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
