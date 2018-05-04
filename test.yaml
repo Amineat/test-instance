@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   VPCId:
     Type: String
-  SubnetId:
+  SubnetPar:
     Type: String
 Resources:
   KopsAWS:
@@ -11,7 +11,7 @@ Resources:
       InstanceType: t2.micro
       ImageId: ami-4d46d534
       KeyName: KeyKops
-      SubnetId: !Ref SubnetId          
+      SubnetId: !Ref SubnetPar          
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
