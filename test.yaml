@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Parameters:
-  VPCId:
-    Type: AWS::EC2::VPC::Id
-  SubnetId:
-    Type: AWS::EC2::Subnet::Id
+Type: "AWS::CloudFormation::Stack"
+Properties:
+  Parameters:
+    AWS CloudFormation Stack Parameters
+  TemplateURL: https://s3-eu-west-1.amazonaws.com/s3-github/para.template
 Resources:
   KopsAWS:
     Type: AWS::EC2::Instance
