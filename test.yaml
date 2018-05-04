@@ -13,8 +13,6 @@ Resources:
       KeyName: KeyKops
       SubnetsiId:
         - !Ref SubnetsParameter       
-      VpcId:
-        - !Ref VPCId
       SecurityGroups:
         - !Ref KopsAWSSG
       UserData: !Base64 |
