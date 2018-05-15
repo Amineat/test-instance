@@ -44,7 +44,4 @@ Resources:
           FromPort: '443'
           ToPort: '443'
           CidrIp: 0.0.0.0/0
-        - IpProtocol: tcp
-          FromPort: '25'
-          ToPort: '25'
-          CidrIp: 0.0.0.0/0 
+         
